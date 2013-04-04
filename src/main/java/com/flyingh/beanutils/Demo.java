@@ -6,9 +6,20 @@ import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.PropertyUtils;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class Demo {
+	@Test
+	public void test3() {
+		Assert.assertTrue(int.class.isPrimitive());
+		Assert.assertTrue(Integer.TYPE.isPrimitive());
+		Assert.assertFalse(Integer.class.isPrimitive());
+		Assert.assertTrue(void.class.isPrimitive());
+		Assert.assertTrue(void.class == Void.TYPE);
+		Assert.assertFalse(Void.class.isPrimitive());
+	}
+
 	@Test
 	public void test2() throws IllegalAccessException,
 			InvocationTargetException, NoSuchMethodException {
